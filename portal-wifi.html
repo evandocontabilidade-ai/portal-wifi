@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Wi-Fi Mercadinho Recanto Verde</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      padding: 16px;
+    }
+
+    .card {
+      background: #ffffff;
+      width: 100%;
+      max-width: 420px;
+      border-radius: 18px;
+      padding: 24px 20px 28px;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.25);
+      text-align: center;
+    }
+
+    .logo {
+      width: 110px;
+      height: 110px;
+      border-radius: 999px;
+      object-fit: cover;
+      margin: 0 auto 12px;
+      border: 3px solid #22c55e;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      background: #e0f2fe;
+      color: #0369a1;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 6px;
+    }
+
+    .subtitle {
+      font-size: 0.95rem;
+      color: #6b7280;
+      margin-bottom: 20px;
+    }
+
+    .button {
+      display: block;
+      width: 100%;
+      border: none;
+      border-radius: 999px;
+      padding: 14px 0;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      background: #22c55e;
+      color: white;
+      box-shadow: 0 10px 20px rgba(22, 163, 74, 0.4);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .button:active {
+      transform: translateY(1px);
+      box-shadow: 0 6px 14px rgba(22, 163, 74, 0.4);
+    }
+
+    .footer {
+      margin-top: 16px;
+      font-size: 0.75rem;
+      color: #9ca3af;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+
+    <!-- LOGO TEMPORÁRIO VERDE -->
+    <img
+      class="logo"
+      src="https://i.imgur.com/7yO8Zr7.png"
+      alt="Logo Mercadinho Recanto Verde"
+    />
+
+    <div class="badge">Rede Clientes</div>
+
+    <h1 class="title">Wi-Fi Disponível</h1>
+    <p class="subtitle">Toque no botão abaixo para entrar na internet.</p>
+
+    <!-- BOTÃO PARA LIBERAR O ACESSO -->
+    <button class="button" onclick="window.location.href='http://neverssl.com';">
+      Entrar na Internet
+    </button>
+
+    <p class="footer">Mercadinho Recanto Verde • Agradecemos a preferência 💚</p>
+  </div>
+</body>
+</html>
