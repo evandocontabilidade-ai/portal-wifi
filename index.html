@@ -104,17 +104,36 @@
       alt="Logo Mercadinho Recanto Verde"
     />
 
-    <div class="badge">Rede Clientes</div>
+    <div class="badge">REDE CLIENTES</div>
 
     <h1 class="title">Wi-Fi Disponível</h1>
     <p class="subtitle">Toque no botão abaixo para entrar na internet.</p>
 
-    <!-- BOTÃO PARA LIBERAR O ACESSO -->
-    <button class="button" onclick="window.location.href='http://neverssl.com';">
+    <!-- BOTÃO QUE CHAMA O LOGIN DO INTELBRAS -->
+    <button class="button" onclick="loginWifi()">
       Entrar na Internet
     </button>
 
     <p class="footer">Mercadinho Recanto Verde • Agradecemos a preferência 💚</p>
   </div>
+
+  <script>
+    function loginWifi() {
+      const params = new URLSearchParams(window.location.search);
+
+      const uamip   = params.get("uamip");
+      const uamport = params.get("uamport") || "3990";
+      const redir   = params.get("redir") || params.get("userurl") || "http://neverssl.com";
+
+      // Se o AP mandou os parâmetros, monta a URL de login dele
+      if (uamip) {
+        const url = http://${uamip}:${uamport}/login?continue=${encodeURIComponent(redir)};
+        window.location.href = url;
+      } else {
+        // Se por algum motivo não veio nada, pelo menos segue pra internet
+        window.location.href = redir;
+      }
+    }
+  </script>
 </body>
 </html>
